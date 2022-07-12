@@ -72,6 +72,22 @@ li{
     font-size: 25px;
     
 }
+.img{
+    border-radius:150px ;
+    position:absolute;
+    background-color: rgba(255, 255, 255, .05);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    margin-left: 55%;
+    margin-top: -15%;
+}
+.principal-img{
+    width:300px;
+    height: 250px;
+}
 .principal-conteudo{
     height: 150px;
     width: 400px;
@@ -153,7 +169,11 @@ li{
 
 }
 .sobre-mim-texto{
+    margin-bottom: 10%;
     margin-left: 40px;
+    font-size: 19px;
+    font-family:'Arima', cursive;
+    font-weight: 600;
 }
 .area-sobre-mim img{
     margin-left: 100px;
@@ -232,7 +252,7 @@ li{
     height: 100px;
     color: darkgray;
 }
-.eu{
+#eu{
     padding-top: 50px;
     text-align: center;
     font-size: 40px;
@@ -241,7 +261,7 @@ li{
     border-top: 0;
     border-bottom: 1px;
     border-style:solid ;
-    background:linear-gradient(100deg, #1e1e1e 5%, #161616 85% );
+    background:linear-gradient(100deg, #1e1e1e 15%, #161616 85% );
 }
 .curriculo{
     padding-top:50px ;
@@ -252,27 +272,29 @@ li{
     border-top: 1px;
     border-bottom: 0;
     border-style:solid ;
-    background:linear-gradient(100deg, #1e1e1e 5%, #161616 85% );
+    background:linear-gradient(100deg, #1e1e1e 15%, #161616 85% );
 }
-.eu:hover{
+#eu:hover{
     animation: gradiente .2s ;
-    background:linear-gradient(100deg, #1e1e1e 1%, #161616 99% );
+    background:linear-gradient(100deg, #1e1e1e 5%, #161616 95% );
     border-color: aliceblue;
 }
 .curriculo:hover{
     animation: gradiente .2s ;
-    background:linear-gradient(100deg, #1e1e1e 1%, #161616 99% );
+    background:linear-gradient(100deg, #1e1e1e 5%, #161616 95% );
     border-color: aliceblue;
 }
 @keyframes gradiente{
     0%{
-        background:linear-gradient(100deg, #1e1e1e 5%, #161616 85% );
+        background:linear-gradient(100deg, #1e1e1e 15%, #161616 85% );
     }
     50%{
-        background:linear-gradient(100deg, #1e1e1e 3%, #161616 87% );
+        background:linear-gradient(100deg, #1e1e1e 10%, #161616 90% );
     }
     100%{
-        background:linear-gradient(100deg, #1e1e1e 1%, #161616 99% );
+        background:linear-gradient(100deg, #1e1e1e 5%, #161616 95% );
     }
 }
+
+
 
