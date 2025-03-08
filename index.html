@@ -1,54 +1,110 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Bruno Vinicius - Portfólio</title>
+    <title>Surpresa para Você</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebee; /* Rosa claro para um toque de amor */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff; /* Fundo branco para contraste */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 90%;
+            max-width: 600px; /* Limita a largura máxima para telas grandes */
+        }
+        h1 {
+            color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            font-size: 24px; /* Tamanho menor para celular */
+        }
+        p {
+            color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            font-size: 18px; /* Tamanho menor para celular */
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            background-color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b71c1c; /* Vermelho mais escuro no hover */
+        }
+        #player, #image-container {
+            display: none; /* Oculta o player e as imagens inicialmente */
+            margin-top: 20px;
+        }
+        .play-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        .play-button:hover {
+            background-color: #b71c1c; /* Vermelho mais escuro no hover */
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Coloca as imagens em coluna para celular */
+            align-items: center;
+            gap: 20px; /* Espaço entre as imagens */
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%; /* Imagens ocupam 100% da largura do container */
+            max-width: 300px; /* Limita o tamanho máximo das imagens */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-           <text>B</text> 
-        </div>
-        <ul class = "lista">
-            <li>Home</li>
-            <li>Projetos</li>
-            <li id="Sobre-Mim-Botao">Sobre Mim</li>
-            <li>Contatos</li>
-        </ul>
-    </header>
-    <main class="principal">
-        <div class="principal-conteudo">
-        <text class="oi">Oi, eu sou o </text>
-        <h1 id="nome "class="principal-nome">Bruno Vinicius</h1>
-        <text class="dev">Front-end developer</text>
-        </div>
-        <div class="img">
-            <img class="principal-img" src="assets/kisspng-javascript-html5-cascading-style-sheets-css3-5ba40e8074f1c0.561934001537478272479.png">
-        </div>
-        <div class="botoes">
-            <a rel="noreferrer nopener" href="https://github.com/Bruno0Vinicius" target="_blank"class="git-botao"><img src="assets/kisspng-github-logo-repository-computer-icons-5afa376c51ca94.387166531526347628335.png">github</a>
-        </div>
-        <div class="area-sobre-mim">
-            <div class="imagem">
-                <img class="eu-img" src="assets/creedo1.jpg">
-             </div>
-             <ul class="opcoes">
-                <li id="eu"><text>Eu</text></li>
-                <li class="curriculo"><text>Currículo</text></li>
-             </ul>
-             <p id="texto" class="sobre-mim-texto"> </p>
-
+    <div class="container">
+        <h1>Para Minha Esposa Linda 💖</h1>
+        <p id="mensagem">Clique no botão para ver sua surpresa!</p>
+        <button class="play-button" onclick="playMusic()">💖!</button>
+        
+        <!-- Player de música -->
+        <div id="player">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/destakmusical/32-tom-jobim-miucha-e-vinicius?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&auto_play=true"></iframe>
         </div>
 
-    </main>
-    <footer class="rodape">
-    </footer>
-    <script src="scripts/script.js"></script>
-    <script src="scripts/rollscript.js"></script> 
-    <script src="scripts/textscript.js"></script>
-    
+        <!-- Container para as imagens -->
+        <div id="image-container" class="image-container">
+            <img src="/assets/foto1.png" alt="Imagem 1">
+            <img src="/assets/foto2.png" alt="Imagem 2">
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            // Mudando a mensagem
+            document.getElementById("mensagem").innerHTML = "Oi Guigui, Se tá vendo isso significa que achou meu hiperfoco de sábado, tô com saudades <3 💕";
+            
+            // Exibindo o player do SoundCloud com a música
+            document.getElementById("player").style.display = "block";
+            
+            // Exibindo as imagens
+            document.getElementById("image-container").style.display = "flex";
+        }
+    </script>
 </body>
 </html>
